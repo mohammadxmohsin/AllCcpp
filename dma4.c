@@ -1,14 +1,21 @@
 #include<stdio.h>
-void display()
-{
-    int a=25;
-    printf("\nDisplay:%d",a);
-}
+#include<stdlib.h>
 int main()
 {
-    int a=21,b;
-    display();
-    printf("\nMain:%d",a);
-    printf("\nGarbage:%d",b);
+    int n,i,*ptr;
+    printf("\nEnter the Number of Elements to Allocate: ");
+    scanf("%d",&n);
+    ptr=(int*)calloc(n,sizeof(int));
+    printf("\nEnter Data to Store: ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",(ptr+i));
+    }
+    printf("\nThe Data at Allocated Memory: ");
+    for(i=0;i<n;i++)
+    {
+        printf("\n%d",*(ptr+i));
+    }
+
     return 0;
 }

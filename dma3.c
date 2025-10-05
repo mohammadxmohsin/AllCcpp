@@ -1,3 +1,4 @@
+//How to use malloc.realloc in Dynamic Memory Allocation
 #include<stdio.h>
 #include<stdlib.h>
 int main()
